@@ -9,7 +9,12 @@ class App < Sinatra::Base
     end
 
     post "/teams" do
+      @team_name = params[team][name]
+      @team_motto = params[team][motto]
 
+      @hero_name = params
+      @hero_power = params
+      @hero_bio = params
       erb :team
     end
 
